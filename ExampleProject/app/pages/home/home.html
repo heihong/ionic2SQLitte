@@ -11,11 +11,14 @@
         </ion-buttons>
     </ion-navbar>
 </ion-header>
- 
+
 <ion-content padding>
     <ion-list>
          <ion-item *ngFor="let person of people">
              {{person.firstname}} {{person.lastname}}
          </ion-item>
      </ion-list>
+     <ion-buttons>
+         <button (click)="seconPage()">nextPage</button>
+     </ion-buttons>
 </ion-content>

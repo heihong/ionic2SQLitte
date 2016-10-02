@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {NavParams} from 'ionic-angular';
 
 /*
   Generated class for the PartyPage page.
@@ -11,9 +12,10 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/party/party.html',
 })
 export class PartyPage {
+  private getToto;
 
-  constructor(private navCtrl: NavController) {
-
+  constructor(private navCtrl: NavController, navParams: NavParams) {
+    this.getToto =navParams.data;
   }
 
 }

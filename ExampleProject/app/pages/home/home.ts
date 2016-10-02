@@ -11,6 +11,7 @@ export class HomePage {
 
     public database: SQLite;
     public people: Array<Object>;
+    public toto:String='test';
 
 
     constructor(public navController: NavController, private platform: Platform) {
@@ -44,7 +45,7 @@ export class HomePage {
         });
     }
   public seconPage(){
-      this.navController.push(PartyPage);
+      this.navController.push(PartyPage,this.toto);
     }
 
 }

@@ -24,6 +24,14 @@ export class HomePage {
 
     }
 
+    public update() {
+        this.database.executeSql("UPDATE people SET firstname='traing' WHERE lastname='heihong'", []).then((data) => {
+            console.log("UPDATE: " + JSON.stringify(data));
+        }, (error) => {
+            console.log("ERROR: " + JSON.stringify(error.err));
+        });
+    }
+
     public add() {
         this.database.executeSql("INSERT INTO people (firstname, lastname) VALUES ('Nic', 'Raboy')", []).then((data) => {
             console.log("INSERTED: " + JSON.stringify(data));
@@ -31,6 +39,22 @@ export class HomePage {
             console.log("ERROR: " + JSON.stringify(error.err));
         });
     }
+    public addheihong() {
+        this.database.executeSql("INSERT INTO people (firstname, lastname) VALUES ('Nic', 'heihong')", []).then((data) => {
+            console.log("INSERTED: " + JSON.stringify(data));
+        }, (error) => {
+            console.log("ERROR: " + JSON.stringify(error.err));
+        });
+    }
+    public delete() {
+        this.database.executeSql("DELETE FROM people WHERE lastname='heihong'", []).then((data) => {
+            console.log("DELETE: " + JSON.stringify(data));
+        }, (error) => {
+            console.log("ERROR: " + JSON.stringify(error.err));
+        });
+    }
+
+
 
     public refresh() {
         this.database.executeSql("SELECT * FROM people", []).then((data) => {

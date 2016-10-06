@@ -13,4 +13,10 @@
 ## Pour créer une page lancer la commande:
 * ionic g page party
 
+## Platform: 
+* ionic platform add android
+
+# Créer l'application sur votre téléphone android
+* ionic run android
+
 
